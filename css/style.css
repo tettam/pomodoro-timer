@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;1,700&display=swap');
+
+:root {
+    --color-bg-burgundy: #400812;
+    --color-tm-burgundy: #ba829625;
+    --color-bg-blue    : #117DBF;
+    --color-timer-blue : #116ebfd8;
+    --color-bg-brown   : #735236;
+    --color-beige      : #BFAC95;
+    --color-beije-dark : #736558;
+    --color-font-grey  : #949BA6;
+    --color-font-dark  : #08080D;
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: var(--color-bg-blue);
+}
+
+
+/*Header*/
+header {
+    padding: 20px;
+}
+.content {
+    max-width: 700px;
+    margin: auto; 
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-font-grey);
+    padding: 20px 0px;
+}
+.header-content span {
+    margin: 0px 5px;
+}
+.header-title {
+    font-size: 30px;
+    font-weight: 900;
+    color: #ffff;
+}
+.header-options {
+    display: flex;
+}
+button {
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+.button-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    width: 130px;
+    padding: 10px;
+    border: none;
+    background-color: var(--color-beige);
+    
+}
+.button-options span {
+    color: #ffff;
+    font-weight: bold;
+}
+.button-options:hover {
+    background-color: #918270;
+    transition: 0.5s;
+}
+.button-options img{
+    width: 20px;
+}
+
+/*Section Timer*/
+.showTime {
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 122px);
+}
+.content2 {
+    max-width: 600px;
+    margin: auto;
+}
+.buttonsShowTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.timerOptions {
+    border: 0;
+    padding: 5px;
+    margin: 0px 20px;
+    width: 100px;
+    height: 40px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 80px;
+    font-weight: 700;
+    background-color: var(--color-timer-blue);
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+.buttonsChangesTimer {
+    margin-top: -60px;
+}
+.timerAction {
+    border: 0;
+    padding: 10px;
+    background-color: var(--color-beige);
+}
+.timerAction:hover {
+    background-color: #918270;
+    transition: 0.5s;
+}
+.pointsEvents {
+    pointer-events: none;
+}
+
+.add-task {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.button-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 50px;
+    border: 0;
+    background-color: var(--color-beige);
+    color: #ffff;
+    margin-top: 5px;
+}
+.button-task:hover {
+    background-color: #918270;
+    transition: 0.5s;
+}
+.button-task img {
+    width: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 100%;
+}
+.task {
+    display: none;
+    background-color: #ffff;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 1s;
+}
+
+
+/*Footer*/
+footer {
+    background-color: var(--color-font-dark);
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+}
+

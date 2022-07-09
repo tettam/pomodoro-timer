@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/icons8-timers-16.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="content header-content">
+            <div class="header-title">Pomovalue</div>
+            <div class="header-options">
+                <button class="button-options header-reports">
+                    <img src="icons/profit-report.png" alt="reports">
+                    <span>Relatórios</span>
+                </button>
+                <button class="button-options header-config">
+                    <img src="icons/configuracoes.png" alt="configuracoes">
+                    <span>Configuração</span>
+                </button>
+                <button class="button-options header-login">
+                    <img src="icons/user.png" alt="login">
+                    <span>Login</span>
+                </button>
+            </div>   
+        </div>
+    </header>
+
+    <section class="showTime content2">
+        <div class="buttonsShowTime">
+            <button class="timerOptions pomodoroWork">Work</button>
+            <button class="timerOptions pomodoroPauseShort">Short Pause</button>
+            <button class="timerOptions pomodoroPauseLong">Long Pause</button>
+        </div>
+
+
+        <div class="timer">
+            <div class="pomodoro-show">00:00</div>
+            <div class="buttonsChangesTimer">
+                <button class="timerAction playTimer">Iniciar</button>
+                <button class="timerAction stopTimer">Pausar</button>
+                <button class="timerAction resetTimer">Resetar</button>
+            </div>
+        </div>
+
+        <audio class="playSons" src="sounds/alarm1.wav"></audio>
+
+        <div class="add-task">
+            <h3>Tarefas</h3>
+            <button class="button-task">
+                <img src="icons/add.png" alt="add"> 
+                <h4>add tarefas</h4>
+            </button>
+        </div>
+
+        <section class="task">
+            <div class="task-title"></div>
+            <div class="task-description"></div>
+        </section>
+    </section>
+
+    
+    <section class="know-more">
+
+    </section>
+    <footer>
+        Feito por Marco Tettamanti
+    </footer>
+
+        <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
