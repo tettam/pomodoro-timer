@@ -177,10 +177,37 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     bottom: 0;
     width: 100%;
     padding: 10px;
     font-size: 15px;
+}
+
+@media (max-width:660px) {  
+    /*Header*/ 
+    .button-options span {
+        display: none;
+    }
+    .button-options {
+        width: 50px;
+    }
+    .headerMobile {
+        display: block;
+        cursor: pointer;
+    }
+    .menuMobile {
+        display: flex;
+        flex-direction: column;
+    }
+    .menuMobile span {
+        width: 40px;
+        height: 8px;
+        background-color: var(--color-bg-brown);
+        margin: 2px;
+    }
+    .headerMobile span:hover {
+        
+    }
+    
 }
 
