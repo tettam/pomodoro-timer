@@ -61,7 +61,6 @@ button {
     padding: 10px;
     border: none;
     background-color: var(--color-beige);
-    
 }
 .button-options span {
     color: #ffff;
@@ -73,6 +72,9 @@ button {
 }
 .button-options img{
     width: 20px;
+}
+.disableButton {
+    
 }
 
 /*Section Timer*/
@@ -97,7 +99,7 @@ button {
     border: 0;
     padding: 5px;
     margin: 0px 20px;
-    width: 100px;
+    width: 107px;
     height: 40px;
 }
 
@@ -204,9 +206,6 @@ footer {
         height: 8px;
         background-color: var(--color-bg-brown);
         margin: 2px;
-    }
-    .headerMobile span:hover {
-        
     }
     
 }

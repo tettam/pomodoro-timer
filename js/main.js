@@ -1,5 +1,5 @@
 // Initial Data
-const optionWork = document.querySelector('.pomodoroWork')  
+const pomodoroWork = document.querySelector('.pomodoroWork')  
 const optionShortPause = document.querySelector('.pomodoroPauseShort') 
 const optionLongPause = document.querySelector('.pomodoroPauseLong')
 
@@ -9,6 +9,9 @@ const resetTimer = document.querySelector('.resetTimer')
 
 const pomodoroShow = document.querySelector('.pomodoro-show')
 const playSons = document.querySelector('.playSons')
+
+const body = document.querySelector('body')
+const timerColor = document.querySelector('.timer')
 
 let selectPomodoro = 0
 let countInterval
@@ -34,6 +37,7 @@ const optionsSelect = (index) => {
     const colorOptions =  color
 
     const splitName = colorOptions.split(',')
+    viewBackgroundColor( splitName )
 }
 
 const updateCountdown = () => {
@@ -42,7 +46,7 @@ const updateCountdown = () => {
     let seconds =  secondsTotal % 60
     viewCountdown( minutes, seconds )
 
-    if(seconds == 00) {
+    if(secondsTotal == 00) {
         playSons.loop = true
         playSons.play()
         clearInterval(countInterval)
@@ -57,26 +61,71 @@ const viewCountdown = ( minutes,seconds ) => {
     pomodoroShow.textContent = `${minutes}:${seconds}`
 }
 
+const viewBackgroundColor = (color) => {
+    body.style.transition = `1s`
+    body.style.backgroundColor = `${color[0]}`
+    timerColor.style.backgroundColor = `${color[1]}`
+}
 
-playTimer.addEventListener('click', function() {
+/*const checkDisableButton = (event , check) => {
+    switch (event) {
+        case 'playTimer':
+                check = 
+            break;
+    
+        default:
+            break;
+    }
+    const disabledButton = event.disabled = check
+    
+}*/
+
+//Events
+
+playTimer.addEventListener('click', playTimerEvent = () => {
     countInterval = setInterval(updateCountdown,1000)
     console.log('play')
+    playSons.loop = false
+    
+    playTimer.disabled = true
+    stopTimer.disabled = false
+    
 })
 
-stopTimer.addEventListener('click', function() {
+stopTimer.addEventListener('click', stopTimerEvent = () => {
     clearInterval(countInterval)
     console.log('stop')
     playSons.loop = false
+
+    playTimer.disabled = false
+    stopTimer.disabled = true
+    
 })
 
-resetTimer.addEventListener('click', function() {
+resetTimer.addEventListener('click', resetTimerEvent = () => {
     clearInterval(countInterval)
     console.log('reset')
     playSons.loop = false
     init(selectPomodoro)
+
+    playTimer.disabled = false
+    stopTimer.disabled = false
 })
 
+pomodoroWork.addEventListener('click', function() {
+    selectPomodoro = 0
+    resetTimerEvent()
+})
 
+optionShortPause.addEventListener('click', function() {
+    selectPomodoro = 1
+    resetTimerEvent()
+})
+
+optionLongPause.addEventListener('click', function() {
+    selectPomodoro = 2
+    resetTimerEvent() 
+})
 
 init(selectPomodoro)
 
