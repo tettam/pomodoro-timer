@@ -14,7 +14,7 @@ const body = document.querySelector('body')
 const timerColor = document.querySelector('.timer')
 
 const headerLogin = document.querySelector('.header-login')
-const headerTitle = document.querySelector('.header-title')
+
 
 let selectPomodoro = 0
 let countInterval
