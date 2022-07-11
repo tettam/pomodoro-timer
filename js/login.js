@@ -5,12 +5,6 @@ const passwordOne = document.querySelector('.passwordOne')
 const passwordTwo = document.querySelector('.passwordTwo')
 const submitForm = document.querySelector('.submitForm')
 
-//const input = document.querySelectorAll('input')
-//console.log(input)
-
-
-
-
 const checkForm = () => {
     setInterval(() => {     
         if(user.value == '' || passwordOne.value == '' || passwordTwo.value == '') {

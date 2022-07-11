@@ -29,6 +29,9 @@ header {
     max-width: 700px;
     margin: auto; 
 }
+.header-title {
+
+}
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -43,6 +46,12 @@ header {
     font-size: 30px;
     font-weight: 900;
     color: #ffff;
+    display: block;
+    cursor: pointer;
+}
+.header-title:hover {
+    color: var(--color-beije-dark);
+    transition: 0.5s;
 }
 .header-options {
     display: flex;
@@ -173,14 +182,65 @@ footer {
     display: flex;
     background-color: var(--color-font-dark);
     color: #ffff;
-    display: flex;
-    position: relative;
+    position: fixed;
     justify-content: center;
     align-items: center;
     bottom: 0;
     width: 100%;
     padding: 10px;
     font-size: 15px;
+}
+/*
+Formulário 
+*/
+.formLogin {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #364a5cd8;
+    width: 300px;
+    height: 400px;
+    color: #ffff;
+    border-radius: 20px;
+}
+
+.addUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px
+}
+
+.addUserForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+}
+
+.addUserForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addUserForm input {
+    height: 40px;
+    margin-top: 20px;
+}
+
+.timerAction {
+    width: 90px;
+    margin-top: 70px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 @media (max-width:660px) {  

@@ -14,6 +14,7 @@ const body = document.querySelector('body')
 const timerColor = document.querySelector('.timer')
 
 const headerLogin = document.querySelector('.header-login')
+const headerTitle = document.querySelector('.header-title')
 
 let selectPomodoro = 0
 let countInterval
@@ -118,8 +119,12 @@ optionLongPause.addEventListener('click', function() {
 
 
 headerLogin.addEventListener('click', () => {
-    const url = 'http://127.0.0.1:5500/pages/login.html'
+    const url = 'https://tettam.github.io/pomodoro-timer/login.html'
     const openLogin = window.location.href = url
+})
+headerTitle.addEventListener('click', () => {
+    const url = 'https://tettam.github.io/pomodoro-timer'
+    const openHeaderTitle = window.location.href = url
 })
 // Form User
 init(selectPomodoro)
