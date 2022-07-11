@@ -13,6 +13,8 @@ const playSons = document.querySelector('.playSons')
 const body = document.querySelector('body')
 const timerColor = document.querySelector('.timer')
 
+const headerLogin = document.querySelector('.header-login')
+
 let selectPomodoro = 0
 let countInterval
 let secondsTotal
@@ -67,18 +69,6 @@ const viewBackgroundColor = (color) => {
     timerColor.style.backgroundColor = `${color[1]}`
 }
 
-/*const checkDisableButton = (event , check) => {
-    switch (event) {
-        case 'playTimer':
-                check = 
-            break;
-    
-        default:
-            break;
-    }
-    const disabledButton = event.disabled = check
-    
-}*/
 
 //Events
 
@@ -99,7 +89,6 @@ stopTimer.addEventListener('click', stopTimerEvent = () => {
 
     playTimer.disabled = false
     stopTimer.disabled = true
-    
 })
 
 resetTimer.addEventListener('click', resetTimerEvent = () => {
@@ -127,6 +116,12 @@ optionLongPause.addEventListener('click', function() {
     resetTimerEvent() 
 })
 
+
+headerLogin.addEventListener('click', () => {
+    const url = 'http://127.0.0.1:5500/pages/login.html'
+    const openLogin = window.location.href = url
+})
+// Form User
 init(selectPomodoro)
 
 

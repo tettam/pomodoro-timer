@@ -73,9 +73,6 @@ button {
 .button-options img{
     width: 20px;
 }
-.disableButton {
-    
-}
 
 /*Section Timer*/
 .showTime {
@@ -171,12 +168,13 @@ button {
     transition: 1s;
 }
 
-
 /*Footer*/
 footer {
+    display: flex;
     background-color: var(--color-font-dark);
     color: #ffff;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     bottom: 0;
